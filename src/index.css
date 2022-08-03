@@ -6,6 +6,16 @@
   margin: 0;
 }
 
+:root {
+  --page-background-color: #fff;
+  --primary-color: #664de5;
+  --heading-color: #000;
+  --sub-heading-color: #5c6984;
+  --stepper-line-width: 50px;
+  --border-color: #ebeff6;
+  --border-width: 2px;
+  --btn-text-color: #fff;
+}
 body {
   margin: 0;
   font-family: 'Inter', apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
@@ -13,9 +23,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 62.5%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.company-name {
+  font-size: 2rem;
+  font-weight: 600;
 }

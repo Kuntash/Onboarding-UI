@@ -1,0 +1,74 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stepper-container {
+  display: flex;
+  column-gap: var(--stepper-line-width);
+  margin-bottom: 6rem;
+}
+
+.stepper-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  border: var(--border-width) solid var(--border-color);
+  position: relative;
+  transition: background-color 0.5s linear;
+}
+
+.stepper-item:not(:last-child)::after {
+  content: '';
+  width: var(--stepper-line-width);
+  height: 2px;
+  background-color: var(--border-color);
+  position: absolute;
+  left: calc(100% + var(--border-width));
+}
+
+.stepper-item-active,
+.stepper-item-passed {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+.stepper-item-active:not(:last-child)::after {
+  background: linear-gradient(
+    to right,
+    var(--primary-color) 50%,
+    var(--border-color) 50%
+  );
+}
+
+.stepper-item-passed:not(:last-child)::after {
+  background-color: var(--primary-color);
+}
+
+.stepper-value {
+  font-size: 1rem;
+  color: var(--sub-heading-color);
+}
+.stepper-item-active .stepper-value,
+.stepper-item-passed .stepper-value {
+  color: #fff;
+}
+.form {
+  width: 100%;
+}
+.btn {
+  cursor: pointer;
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  width: 100%;
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  color: var(--btn-text-color);
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  font-size: 0.8rem;
+  border: 0;
+}
